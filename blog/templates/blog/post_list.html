@@ -8,15 +8,13 @@
         </div>
 
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p> Seska: I won't play these games with the trick of light.  The Doctor: Sticks and stones won't break my bones, so you can imagine how I feel about being called names. The Doctor: You heard the man. Run along. I'll reattach any severed limbs, just don't misplace them. [Tuvok is setting a trap, using Tom Paris as bait]  Tom Paris: Hey, Tuvok, I know it's a little late to ask, but you're sure you've got the logic of this thing worked out?  Tuvok: If I am incorrect, we will know it shortly.  Tom Paris: Ah, that makes me feel a whole lot better.</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit , morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
+        {% for post in posts %}
+                <div>
+			        <p>published: {{ post.published_date }}</p>
+			        <h1><a href="">{{ post.title }}</a></h1>
+			        <p>{{ post.text|linebreaksbr }}</p>
+    	</div>
+        {% endfor %}
         </div>
     </body>
 </html>
